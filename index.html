@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Karime Martinez Data</title>
+    
+    <!-- Tipografías Oficiales de Marca: Montserrat y Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Íconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Librería Universal de Banderas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+
+    <style>
+        /* PALETA DE BRANDING OFICIAL */
+        :root {
+            --verde-bosque: #2F5D50;
+            --azul-petroleo: #2D5F73;
+            --arena-calido: #D8C8B0;
+            --marfil: #F7F4EF;
+            --mostaza-suave: #D8A94A;
+            --white: #FFFFFF;
+            --text-dark: #1A202C;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Fondo Marfil del manual de marca */
+            background-color: var(--marfil);
+            font-family: 'Lora', serif;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* CONTENEDOR TIPO TARJETA (PROFILE CARD) */
+        .contact-card {
+            background-color: var(--white);
+            max-width: 480px;
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(47, 93, 80, 0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* SECCIÓN DE LA FOTO EN PRIMER PLANO */
+        .photo-header {
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Asegura que tu rostro quede perfectamente centrado */
+            object-position: center 25%; 
+        }
+
+        /* SECCIÓN DE INFORMACIÓN */
+        .info-section {
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* TÍTULOS Y TEXTOS */
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--verde-bosque);
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--azul-petroleo);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--mostaza-suave);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* SELECTOR DE IDIOMA EN LA TARJETA */
+        .lang-toggle-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--arena-calido);
+            color: var(--verde-bosque);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background-color: var(--verde-bosque);
+            color: var(--white);
+            border-color: var(--verde-bosque);
+        }
+
+        /* BOTONES DE CONTACTO */
+        .action-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .btn-link {
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ESTILOS DE BOTONES DIFERENCIADOS */
+        .btn-primary {
+            background-color: var(--verde-bosque);
+            color: var(--white);
+            border: 2px solid var(--verde-bosque);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--verde-bosque);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--verde-bosque);
+            border: 2px solid var(--verde-bosque);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--marfil);
+        }
+
+        .btn-accent {
+            background-color: var(--mostaza-suave);
+            color: var(--white);
+            border: 2px solid var(--mostaza-suave);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--white);
+            color: var(--mostaza-suave);
+        }
+
+        .btn-link i {
+            font-size: 1.2rem;
+        }
+
+        /* REDES SOCIALES CIRCULARES */
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--arena-calido);
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--marfil);
+            color: var(--verde-bosque);
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--verde-bosque);
+            color: var(--mostaza-suave);
+            transform: scale(1.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #2D5F73;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .lang-es { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="contact-card">
+        
+        <!-- FOTO EN PRIMER PLANO -->
+        <div class="photo-header">
+            <!-- Referencia exacta a la foto seleccionada -->
+            <img src="Karime002 (2).jpeg" alt="Karime Martinez">
+        </div>
+
+        <div class="info-section">
+            
+            <!-- SELECTOR DE IDIOMA SUTIL -->
+            <div class="lang-toggle-container">
+                <button id="btn-es" class="lang-btn" onclick="switchLanguage('es')">ESP</button>
+                <button id="btn-en" class="lang-btn active" onclick="switchLanguage('en')">ENG</button>
+            </div>
+
+            <!-- NOMBRES Y TÍTULOS -->
+            <h1>Karime Martinez Araos</h1>
+            <p class="subtitle">
+                <span class="lang-es">Líder de Seguridad y Salud en el Trabajo SST/EHS/HSE | Experta en Analítica de Datos y BI</span>
+                <span class="lang-en">Health & Safety Senior Leader EHS/HSE | Data Analytics & BI Expert</span>
+            </p>
+            <p class="tagline">
+                <span class="lang-es">Cuidado de la Vida | Decisiones basadas en Datos | Operaciones Sostenibles</span>
+                <span class="lang-en">People First - Live value | Data-Driven Decisions | Sustainable Operations</span>
+            </p>
+
+            <!-- BOTONES PRINCIPALES DE CONTACTO Y DESCARGA -->
+            <div class="action-links">
+                
+                <a href="https://wa.me/573332272943" class="btn-link btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="lang-es">Hablemos por WhatsApp +57 333 2272943</span>
+                    <span class="lang-en">Let's chat on WhatsApp  +57 333 2272943</span>
+                </a>
+
+                <a href="mailto:karimemartinezdata@gmail.com" class="btn-link btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    <span class="lang-es">Envíame un Correo Electrónico karimemartinezdata@gmail.com</span>
+                    <span class="lang-en">Send me an Email karimemartinezdata@gmail.com</span>
+                </a>
+
+                <!-- PORTAFOLIO DE MARKETING Y CV -->
+                <a href="portafolio_marketing.pdf" class="btn-link btn-accent" target="_blank">
+                    <i class="fas fa-bullhorn"></i>
+                    <span class="lang-es">Mira mi Portafolio</span>
+                    <span class="lang-en">Check my Portfolio</span>
+                </a>
+
+                <a href="CV_Karime_Martinez_ES.pdf" class="btn-link btn-secondary lang-es" download>
+                    <i class="fas fa-file-download"></i>
+                    <span>Descargar Hoja de Vida (PDF)</span>
+                </a>
+
+                <a href="CV_Karime_Martinez_EN.pdf" class="btn-link btn-secondary lang-en" download>
+                    <i class="fas fa-file-download"></i>
+                    <span>Download Resume/CV (PDF)</span>
+                </a>
+            </div>
+
+            <!-- REDES SOCIALES -->
+            <div class="social-row">
+                <a href="https://www.linkedin.com/in/alexandra-martinez-aa4b4935" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/karimebot" class="social-icon" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Pie de Pagina -->        
+        <footer>
+            © 2026 Karime Martinez · High Impact Performance
+<!-- CONTADOR DE VISITAS -->
+<div style="margin-top: 15px; margin-bottom: 15px; display: flex; justify-content: center;">
+    <img src="https://hits.sh/karimebot.github.io/Landingkarimedata.svg?label=Welcomes&color=2F5D50&labelColor=D8A94A" alt="Visitas">
+</div>
+        </footer>        
+    </div>
+
+    <!-- SCRIPT DE IDIOMA -->
+    <script>
+        function switchLanguage(lang) {
+            const esElements = document.querySelectorAll('.lang-es');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btnEs = document.getElementById('btn-es');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'en') {
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => {
+                    if (el.tagName === 'SPAN') {
+                        el.style.display = 'inline';
+                    } else if (el.classList.contains('btn-link')) {
+                        el.style.display = 'flex';
+                    } else {
+                        el.style.display = 'block';
+                    }
+                });
+                btnEs.classList.remove('active');
+                btnEn.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'en');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                esElements.forEach(el => {
+                    if (el.tagName === 'SPAN') {
+                        el.style.display = 'inline';
+                    } else if (el.classList.contains('btn-link')) {
+                        el.style.display = 'flex';
+                    } else {
+                        el.style.display = 'block';
+                    }
+                });
+                btnEn.classList.remove('active');
+                btnEs.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'es');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
